@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "total": 40,
+    "passed": 40,
+    "failed": 0,
+    "failures": []
+  },
+  "results": [
+    {
+      "name": "GET / 返回 200",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "首页包含姓名",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "首页内联 __SITE_DATA__",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "中文编码正确",
+      "ok": true,
+      "extra": "text/html; charset=utf-8"
+    },
+    {
+      "name": "GET /admin 返回 200",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "后台页含登录表单",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "静态 CSS 可访问",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "静态 JS 可访问",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "头像 SVG 可访问",
+      "ok": true,
+      "extra": "image/svg+xml"
+    },
+    {
+      "name": "favicon 可访问",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "静态目录穿越被拦截",
+      "ok": true,
+      "extra": "404"
+    },
+    {
+      "name": "GET /api/resume",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "简历含 4 个项目",
+      "ok": true,
+      "extra": "4"
+    },
+    {
+      "name": "GET /api/profile",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "GET /api/projects 过滤生效",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "GET /api/skills",
+      "ok": true,
+      "extra": "5"
+    },
+    {
+      "name": "POST /api/visit",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "GET /api/stats 有 14 天序列",
+      "ok": true,
+      "extra": "14"
+    },
+    {
+      "name": "统计含今日访问",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "POST /api/messages 创建成功",
+      "ok": true,
+      "extra": "(201, {'id': 1, 'name': '测试访客', 'content': '接口自测留言 ✅', 'created_at': '2026-10-01 10:12:15', 'device': '未知系统 · 其他浏览器'})"
+    },
+    {
+      "name": "GET /api/messages 列表",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "公开列表不含联系方式",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "空留言被拒绝",
+      "ok": true,
+      "extra": "422"
+    },
+    {
+      "name": "重复留言触发限流或成功",
+      "ok": true,
+      "extra": "201"
+    },
+    {
+      "name": "未登录访问后台接口返回 401",
+      "ok": true,
+      "extra": "401"
+    },
+    {
+      "name": "错误口令登录失败",
+      "ok": true,
+      "extra": "401"
+    },
+    {
+      "name": "正确口令登录成功",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "后台概览可读",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "概览含最近访问",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "后台留言列表可读",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "后台列表含 IP 字段",
+      "ok": true,
+      "extra": ""
+    },
+    {
+      "name": "后台关键字搜索",
+      "ok": true,
+      "extra": "1"
+    },
+    {
+      "name": "隐藏留言成功",
+      "ok": true,
+      "extra": "(200, {'ok': True, 'id': 1, 'approved': False})"
+    },
+    {
+      "name": "隐藏后不在公开列表",
+      "ok": true,
+      "extra": "[2]"
+    },
+    {
+      "name": "重新公开留言成功",
+      "ok": true,
+      "extra": "(200, {'ok': True, 'id': 1, 'approved': True})"
+    },
+    {
+      "name": "登出成功",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "登出后令牌失效",
+      "ok": true,
+      "extra": "401"
+    },
+    {
+      "name": "删除测试留言",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "健康检查",
+      "ok": true,
+      "extra": "200"
+    },
+    {
+      "name": "运行模式为 stdlib",
+      "ok": true,
+      "extra": "stdlib"
+    }
+  ]
+}

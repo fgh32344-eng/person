@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>王耀威 · 人工智能 / 大模型应用 / 软件开发</title>
+<meta name="description" content="王耀威的个人主页 —— 宿州学院人工智能专业 2027 届本科生，方向：计算机视觉、大模型应用与后端开发。">
+<meta name="author" content="王耀威">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#home">
+      <span class="nav__logo">WY</span>
+      <span class="nav__name">王耀威</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">关于</a>
+      <a href="#education">教育</a>
+      <a href="#experience">实习</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#campus">校园</a>
+      <a href="#contact">留言</a>
+    </nav>
+    <div class="nav__right">
+      <span class="nav__views" title="本站累计访问量">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+        <b id="navViews">--</b>
+      </span>
+      <a class="btn btn--ghost btn--sm" href="/admin">后台</a>
+      <button class="nav__toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__progress" id="navProgress"></div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">
+          <span class="pulse"></span>
+          <span id="heroSchool">宿州学院 · 人工智能</span>
+        </p>
+        <h1 class="hero__title">
+          <span id="heroName">王耀威</span>
+          <span class="hero__title-accent">Wang Yaowei</span>
+        </h1>
+        <p class="hero__role" id="heroHeadline">2027 届本科生 · 人工智能专业</p>
+        <p class="hero__tagline" id="heroTagline"></p>
+        <div class="hero__meta" id="heroMeta"></div>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">查看项目</a>
+          <a class="btn btn--ghost" href="/api/resume" target="_blank" rel="noopener">简历 JSON 接口</a>
+          <a class="btn btn--ghost" href="/api/docs" target="_blank" rel="noopener">API 文档</a>
+        </div>
+      </div>
+
+      <aside class="hero__card">
+        <div class="idcard">
+          <div class="idcard__avatar">
+            <img id="avatarImg" src="/static/assets/avatar.svg" alt="王耀威 头像">
+          </div>
+          <div class="idcard__info">
+            <h3 id="cardName">王耀威</h3>
+            <p id="cardTarget"></p>
+            <ul class="idcard__list">
+              <li><span>学历</span><b id="cardDegree">本科在读</b></li>
+              <li><span>专业</span><b id="cardMajor">人工智能</b></li>
+              <li><span>毕业</span><b id="cardGrad">2027.06</b></li>
+              <li><span>地区</span><b id="cardCity">安徽省宿州市</b></li>
+            </ul>
+            <div class="idcard__contacts" id="cardContacts"></div>
+          </div>
+        </div>
+        <div class="stats" id="heroStats"></div>
+      </aside>
+    </div>
+    <a class="scroll-hint" href="#about" aria-label="向下滚动"><span></span></a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">关于我</h2>
+        <p class="section__sub">About</p>
+      </header>
+      <div class="about">
+        <div class="about__main card">
+          <p id="aboutText" class="about__text"></p>
+          <div class="about__learning">
+            <h4>▶ 在学 / 提升中</h4>
+            <div class="chips" id="learningChips"></div>
+          </div>
+        </div>
+        <div class="about__side">
+          <div class="card card--accent">
+            <h4>方向定位</h4>
+            <ul class="bullet" id="focusList">
+              <li>计算机视觉：检测 / 姿态 / 分割</li>
+              <li>大模型应用：RAG / Agent / Prompt</li>
+              <li>后端工程：FastAPI / 数据库 / 容器</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>联系方式</h4>
+            <ul class="contact-list" id="contactList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">教育背景</h2>
+        <p class="section__sub">Education</p>
+      </header>
+      <div class="timeline" id="educationTimeline"></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">实习经历</h2>
+        <p class="section__sub">Experience</p>
+      </header>
+      <div class="timeline" id="experienceTimeline"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title">项目经历</h2>
+        <p class="section__sub">Projects</p>
+      </header>
+      <div class="filters" id="projectFilters"></div>
+      <div class="projects" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title">专业技能</h2>
+        <p class="section__sub">Skills</p>
+      </header>
+      <div class="skills" id="skillGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CAMPUS ============ -->
+  <section class="section" id="campus">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">06</span>
+        <h2 class="section__title">校园经历</h2>
+        <p class="section__sub">Campus</p>
+      </header>
+      <div class="campus" id="campusGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / MESSAGES ============ -->
+  <section class="section section--last" id="contact">
+    <div class="container">
+      <header class="section__head">
+        <span class="section__index">07</span>
+        <h2 class="section__title">留言板</h2>
+        <p class="section__sub">Leave a message</p>
+      </header>
+      <div class="board">
+        <div class="card board__form">
+          <h3>给我留言</h3>
+          <p class="muted">留言通过后端接口写入 SQLite 数据库，会实时出现在右侧列表中。</p>
+          <form id="messageForm" novalidate>
+            <div class="field-row">
+              <label class="field">
+                <span>称呼</span>
+                <input type="text" id="msgName" maxlength="20" placeholder="匿名访客" autocomplete="name">
+              </label>
+              <label class="field">
+                <span>联系方式（选填）</span>
+                <input type="text" id="msgContact" maxlength="80" placeholder="邮箱 / 微信 / 电话">
+              </label>
+            </div>
+            <label class="field">
+              <span>留言内容 <i id="msgCounter">0/500</i></span>
+              <textarea id="msgContent" rows="4" maxlength="500" required placeholder="你好，想聊聊……"></textarea>
+            </label>
+            <div class="form-foot">
+              <button type="submit" class="btn btn--primary" id="msgSubmit">提交留言</button>
+              <span class="form-status" id="msgStatus" role="status"></span>
+            </div>
+          </form>
+        </div>
+        <div class="board__list">
+          <div class="board__list-head">
+            <h3>访客留言 <em id="msgTotal">0</em></h3>
+            <button class="btn btn--ghost btn--sm" id="msgRefresh">刷新</button>
+          </div>
+          <div class="messages" id="messageList"></div>
+          <div class="pager" id="messagePager"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__name">王耀威 · <span id="footerRole">人工智能</span></p>
+      <p class="muted small">本站由 FastAPI + SQLite + 原生前端构建 · 站内数据接口开放，欢迎调用</p>
+    </div>
+    <div class="footer__stats" id="footerStats"></div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
