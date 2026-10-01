@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>后台管理 · 王耀威个人主页</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body class="admin-body">
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- ============ 登录 ============ -->
+<section class="login" id="loginView">
+  <form class="login__card card" id="loginForm">
+    <div class="login__brand">
+      <span class="nav__logo">WY</span>
+      <div>
+        <h1>后台管理</h1>
+        <p class="muted small">王耀威 · 个人主页</p>
+      </div>
+    </div>
+    <label class="field">
+      <span>用户名</span>
+      <input type="text" id="loginUser" value="admin" autocomplete="username" required>
+    </label>
+    <label class="field">
+      <span>密码</span>
+      <input type="password" id="loginPass" autocomplete="current-password" required>
+    </label>
+    <button type="submit" class="btn btn--primary" id="loginSubmit" style="width:100%;margin-top:1.1rem">登录</button>
+    <p class="form-status" id="loginStatus" role="status"></p>
+    <p class="muted small login__hint">
+      默认口令 <code>admin / admin123</code>，可用环境变量
+      <code>PORTFOLIO_ADMIN_USER</code>、<code>PORTFOLIO_ADMIN_PASSWORD</code> 覆盖。
+    </p>
+    <a class="btn btn--ghost btn--sm" href="/" style="width:100%;margin-top:.4rem">← 返回首页</a>
+  </form>
+</section>
+
+<!-- ============ 控制台 ============ -->
+<div class="admin" id="adminView" hidden>
+  <header class="admin__top">
+    <div class="admin__brand">
+      <span class="nav__logo">WY</span>
+      <div>
+        <h1>后台控制台</h1>
+        <p class="muted small" id="adminUser">已登录</p>
+      </div>
+    </div>
+    <div class="admin__actions">
+      <a class="btn btn--ghost btn--sm" href="/" target="_blank" rel="noopener">查看首页</a>
+      <a class="btn btn--ghost btn--sm" href="/api/docs" target="_blank" rel="noopener">API 文档</a>
+      <button class="btn btn--ghost btn--sm" id="logoutBtn">退出登录</button>
+    </div>
+  </header>
+
+  <main class="admin__main">
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <h2>最近 14 天访问趋势</h2>
+        <span class="muted small">柱高 = 页面访问量，折线 = 独立访客</span>
+      </div>
+      <div class="chart" id="trendChart"></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel__head"><h2>热门页面</h2></div>
+        <ul class="rank" id="topPages"></ul>
+      </div>
+      <div class="panel">
+        <div class="panel__head"><h2>最近访问记录</h2></div>
+        <ul class="visits" id="recentVisits"></ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__head">
+        <h2>留言管理</h2>
+        <div class="panel__filters">
+          <input type="search" id="msgKeyword" placeholder="搜索称呼 / 内容 / 联系方式">
+          <select id="msgFilter">
+            <option value="">全部状态</option>
+            <option value="1">已公开</option>
+            <option value="0">已隐藏</option>
+          </select>
+          <button class="btn btn--ghost btn--sm" id="msgSearch">搜索</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:64px">ID</th>
+              <th style="width:130px">称呼</th>
+              <th>留言内容</th>
+              <th style="width:170px">联系方式</th>
+              <th style="width:150px">来源</th>
+              <th style="width:150px">时间</th>
+              <th style="width:120px">状态</th>
+              <th style="width:150px">操作</th>
+            </tr>
+          </thead>
+          <tbody id="msgTable"></tbody>
+        </table>
+      </div>
+      <div class="pager" id="adminPager"></div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/static/js/admin.js"></script>
+</body>
+</html>
